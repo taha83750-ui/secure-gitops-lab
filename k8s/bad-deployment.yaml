@@ -11,4 +11,4 @@ spec:
           image: nginx:latest
           # Violates NIS2 Policy: Privileged mode running as root
           securityContext:
-            privileged: true
+            privileged: false
