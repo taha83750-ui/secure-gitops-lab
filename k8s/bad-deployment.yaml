@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: non-compliant-workload
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest
+          # Violates NIS2 Policy: Privileged mode running as root
+          securityContext:
+            privileged: true
