@@ -40,7 +40,7 @@ jobs:
 
      # 4. Policy Enforcement (OPA / Conftest)
       - name: Run Conftest OPA NIS2 Policy Scan
-        uses: open-policy-agent/conftest-action@v1
+        uses: instrumenta/conftest-action@master
         with:
           files: k8s
           policy: policy
